@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+    <title>自动搜索</title>
+    <script src="tree.js"></script>
+    <script>
+        function find() {
+
+        var inputField = document.getElementById("input")
+        var arr= new Array()
+        var data=new Array("zhang","zhangshi","zhangshiyu")
+
+            for (var i=0;i<data.length;i++){
+                if ((data[i]).indexOf(inputField.value)>=0){
+                    arr.push(data[i]);
+                }
+            }
+            console.log(arr)
+
+    }
+    </script>
+</head>
+<body>
+自动搜索框 <input type="text" id="input" onkeyup="find()">
+<div style="position:absolute;" id="popup">
+    <table id="table" border="0" cellspacing="0" cellpadding="0">
+        <tbody id="table_body"></tbody>
+    </table>
+</div>
+</body>
+</html>
